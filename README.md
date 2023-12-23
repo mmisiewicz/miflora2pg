@@ -55,7 +55,8 @@ I put an entry in my crontab to poll the data regularly (using pyenv here, but a
 # Querying the data
 
 ```
-SELECT date_bin(interval '4 hours', reading_date, '2023-12-12'), metric, round(avg(metric_value)::numeric,1) FROM miflora_readings JOIN miflora_sensor_assignments msa on sensor_id = msa.id 
+SELECT date_bin(interval '4 hours', reading_date, '2023-12-12'), metric, round(avg(metric_value)::numeric,1) 
+FROM miflora_readings JOIN miflora_sensor_assignments msa on sensor_id = msa.id 
 WHERE name='lemon' and reading_date >= now() - interval '7 days' 
 GROUP BY 1,2 
 ORDER BY 1,2;
