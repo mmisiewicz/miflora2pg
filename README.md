@@ -40,7 +40,7 @@ You're looking for `Flower care`. In this example, `5C:85:AB:CD:DE:FF` is the bt
 Once you have them, insert the addreses into the assignment table, by running:
 
 ```
-INSERT INTO miflora_sensor_assignments (name, mac) values ('monstera' 'ab:cd:12:34:56:78');
+INSERT INTO miflora_sensor_assignments (name, mac) values ('monstera' '5C:85:AB:CD:DE:FF');
 ```
 
 ## Schedule reader.py
